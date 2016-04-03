@@ -10,13 +10,13 @@ You probably already have a favorite terminal, and I won't try to convince you t
 	$ brew install tmux --HEAD
 ```
 
-> .zshrc
 ```zsh
+# .zshrc
 export TERM="screen-256color"
 ```
 
-> .tmux.conf
 ```tmux
+# .tmux.conf
 set-option -ga terminal-overrides ",screen-256color:Tc"
 ```
 
