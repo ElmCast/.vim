@@ -7,7 +7,7 @@ I have been asked a lot lately about the Vim setup I use for [ElmCast.io](http:/
 You probably already have a favorite terminal, and I won't try to convince you to change. To get the best experience, however, you need one with 24bit color support. I use the 2.9 beta of [iTerm2](http://iterm2.com/downloads.html) which works great. The caveat is that tmux only recently got patched and can be a bit fiddly to enable. You'll need to set the `TERM` of the outer shell to a value that supports it, then add a terminal override in tmux.
 
 ```
-	$ brew install tmux --HEAD
+$ brew install tmux --HEAD
 ```
 
 ```zsh
@@ -25,7 +25,7 @@ set-option -ga terminal-overrides ",screen-256color:Tc"
 I prefer [neovim](https://github.com/neovim/neovim) which is just an all around better experience than vanilla Vim. Most plugins work great with it already, and can make use of the improved async support and performance.
 
 ```
-	$ brew install neovim
+$ brew install neovim
 ```
 
 ## Make Backups
@@ -33,8 +33,8 @@ I prefer [neovim](https://github.com/neovim/neovim) which is just an all around 
 **BACKUP your .vimrc or init.vim file.** I cannot stress this enough, because you might make a mistake or realize that this setup just isn't your bowl of peaches. Some day you will want to go back to your favorite config and just incorporate some of the cool stuff you've learn from this experience.
 
 ```
-	$ cp -R .vimrc .vimrc.bak
-	$ cp -R .vim/init.vim .vim/init.vim.bak
+$ cp -R .vimrc .vimrc.bak
+$ cp -R .vim/init.vim .vim/init.vim.bak
 ```
 
 ## Plugin Management
@@ -42,8 +42,8 @@ I prefer [neovim](https://github.com/neovim/neovim) which is just an all around 
 Any plugin manager should work, but you will need make to make the needed changes for yourself. I have been using [vim-plug](https://github.com/junegunn/vim-plug) for years because of its power, simplicity, and minimal interface.
 
 ```
-	$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-			https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ## Relax.
