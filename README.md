@@ -6,7 +6,7 @@ I have been asked a lot lately about the Vim setup I use for [ElmCast.io](http:/
 
 You probably already have a favorite terminal, and I won't try to convince you to change. To get the best experience, however, you need one with 24bit color support.
 
-Since I am on osx, I use the 2.9 beta of [iTerm2](http://iterm2.com/downloads.html), which works great. The caveat is that if you use [tmux](https://tmux.github.io/), it only recently got patched for it, and can be a bit fiddly to enable. You'll need to set the `TERM` of the outer shell to a value that supports 24bit color, and then add a terminal override in tmux.
+Since I am on osx, I use the 2.9 beta of [iTerm2](http://iterm2.com/downloads.html), which works great. If you like [tmux](https://tmux.github.io/), 24bit color was patched in only recently. You'll need to set the `TERM` of the outer shell to a valid value, and then add a terminal override for it in tmux.
 
 ```
 $ brew install tmux --HEAD
