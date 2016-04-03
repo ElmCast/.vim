@@ -6,7 +6,7 @@ I have been asked a lot lately about the Vim setup I use for [ElmCast.io](http:/
 
 You probably already have a favorite terminal, and I won't try to convince you to change. To get the best experience, however, you need one with 24bit color support.
 
-Since I am on osx, I use the 2.9 beta of [iTerm2](http://iterm2.com/downloads.html), which works great. If you like [tmux](https://tmux.github.io/), 24bit color was patched in only recently. You'll need to set the `TERM` of the outer shell to a valid value, and then add a terminal override for it in tmux.
+Since I am on OS X, I use the 2.9 beta of [iTerm2](http://iterm2.com/downloads.html), which works great. If you like [Tmux](https://tmux.github.io/), 24bit color was patched in only recently. You'll need to set the `TERM` of the outer shell to a valid value, and then add a terminal override for it in Tmux.
 
 ```
 $ brew install tmux --HEAD
@@ -24,7 +24,7 @@ set-option -ga terminal-overrides ",screen-256color:Tc"
 
 ## Install Vim
 
-I prefer [neovim](https://github.com/neovim/neovim) which is just an all around better experience than vanilla Vim. Most plugins work great with it already, and can make use of the improved asynchronous support and performance. 
+I prefer [neovim](https://github.com/neovim/neovim) which is just an all around better experience than vanilla Vim. Most plugins work great with it already, and can make use of the improved asynchronous support and performance.
 
 No, that isn't a typo. The homebrew formula for neovim is provide by the authors separately, so that is why the package name isn't just 'neovim'.
 
@@ -103,7 +103,7 @@ The [gruvox-contrib](https://github.com/morhetz/gruvbox-contrib) repo also has s
 
 ### Plug ['vim-airline/vim-airline'](https://github.com/vim-airline/vim-airline)
 
-Airline is a "lean & mean status/tabline for Vim that's light as air." It is fast, looks great out of the box, and is infinitely customizable. And guess what? Gruvbox provides a great theme; no setup needed. I like to change the character that is used betwen sections in the status bar.
+Airline is a "lean & mean status/tabline for Vim that's light as air." It is fast, looks great out of the box, and is infinitely customizable. And guess what? Gruvbox provides a great theme; No setup needed. I like to change the character that is used between sections in the status bar.
 
 ```vim
 let g:airline_left_sep= '░'
@@ -112,7 +112,7 @@ let g:airline_right_sep= '░'
 
 ### Plug ['scrooloose/syntastic'](https://github.com/scrooloose/syntastic)
 
-Syntastic is a syntax checking plugin, and it provides support for just about every language ever created. It runs your code through various linting programs, and shows any issues that come up. This allows you to catch errors long before you even try compile.
+Syntastic is a syntax checking plugin, and it provides support for just about every language ever created. It runs your code through various linting programs, and shows any issues that come up. This allows you to catch errors long before you even try to compile.
 
 I like to make sure the location list is automatically populated and toggled when there is an problem. The ugly, bright red error display it adds to airline isn't really needed, so I disable it.
 
@@ -126,10 +126,10 @@ let g:airline#extensions#syntastic#enabled = 0
 
 I know what you are thinking, "Vim is a code editor. Where are all the language plugins??" Vim Polyglot is a curated collection of language packs. This might be the most contentious choice so far, so I'll have the project speak for itself.
 
-- It **won't affect your startup time**, as scripts are loaded only on demand.
-- It **installs and updates 70+ times faster** than 70+ packages it consist of.
-- Solid syntax and indentation support. Only the best language packs.
-- All unnecessary files are ignored (like enormous documentation from php support).
+- It won't affect your startup time, as scripts are loaded only on demand.
+- It installs and updates 70+ times faster than the 70+ packages it consist of.
+- Solid syntax and indentation support, with the best language packs.
+- All unnecessary files are ignored, like large documentation folders.
 - No support for esoteric languages, only the most popular ones.
 - Each build is tested by an automated vimrunner script on CI.
 
@@ -139,7 +139,7 @@ Perhaps it didn't choose the language pack you prefer, or you'd like to use the 
 
 We are finally ready to configure Elm. First, I disable the elm package in polyglot, which provides the venerable [elm.vim](https://github.com/lambdatoast/elm.vim) plugin. I suggest you go check it out, because you might find you like it more than `elm-vim`.
 
-I prefer turning detailed completion on, which shows the type declaration in the drop down menu. I also have [elm-format](https://github.com/avh4/elm-format) make my code look great every time I save a file. Finally, I have syntastic also show warnings in addition to errors.
+I prefer turning detailed completion on, which shows the type declaration in the drop down menu. I also have [elm-format](https://github.com/avh4/elm-format) make my code look great every time I save a file. Finally, I have Syntastic also show warnings in addition to errors.
 
 ```vim
 let g:polyglot_disabled = ['elm']
@@ -148,7 +148,7 @@ let g:elm_format_autosave = 1
 let g:elm_syntastic_show_warnings = 1
 ```
 
-There are a few other file types that you often need to edit in an Elm project. Polyglot will take care of html, css, and json for you. In Markdown files I like to turn on spelling, enable line breaks, and remove line numbers.
+There are a few other file types that you often need to edit in an Elm project. Polyglot will take care of HTML, CSS, and Json for you. In Markdown files I like to turn on spelling, enable line breaks, and remove line numbers.
 
 You can also configure the languages that you want highlighted in Markdown code fences.
 
@@ -163,4 +163,4 @@ let g:markdown_fenced_languages = ['html', 'json', 'css', 'javascript', 'elm', '
 
 I know it seems like a lot of work, but it goes to show how easy is is to take for granted the expert domain knowledge we accumulate over the years. If someone is coming from another editor, or isn't familiar the command line, each of those tiny configuration steps must be gleaned from pouring over disparate blog posts and help files spread all over the place.
 
-I encourage you to think about what it's like for a beginner to get started with your own projects, and to create detailed guides just for them. Remember, every detail is precious. Happy coding!
+I encourage you to think about what it's like for a beginner to get started with your own projects, and to create walkthroughs just for them. Remember, every detail is precious. Happy coding!
