@@ -4,7 +4,7 @@ I have been asked a lot lately about the Vim setup I use for [ElmCast.io](http:/
 
 ## Choose a Terminal
 
-You probably already have a favorite terminal, and I won't try to convince you to change. To get the best experience, however, you need one with 24bit color support. I use the 2.9 beta of [iTerm2](http://iterm2.com/downloads.html) which works great. The caveat is that tmux only recently got patched and can be a bit fiddly to enable. You'll need to set the `TERM` of the outer shell to a value that supports it, then add a terminal override in tmux.
+You probably already have a favorite terminal, and I won't try to convince you to change. To get the best experience, however, you need one with 24bit color support. I use the 2.9 beta of [iTerm2](http://iterm2.com/downloads.html) which works great. The caveat is that if you use [tmux](https://tmux.github.io/), it only recently got support, and can be a bit fiddly to enable. You'll need to set the `TERM` of the outer shell to a value that supports 24bit color, and then add a terminal override in tmux for that term.
 
 ```
 $ brew install tmux --HEAD
@@ -22,7 +22,7 @@ set-option -ga terminal-overrides ",screen-256color:Tc"
 
 ## Install Vim
 
-I prefer [neovim](https://github.com/neovim/neovim) which is just an all around better experience than vanilla Vim. Most plugins work great with it already, and can make use of the improved async support and performance. 
+I prefer [neovim](https://github.com/neovim/neovim) which is just an all around better experience than vanilla Vim. Most plugins work great with it already, and can make use of the improved asynchronous support and performance. 
 
 No, that isn't a typo. The homebrew formula for neovim is provide by the authors separately, so that is why the package name isn't just 'neovim'.
 
@@ -110,9 +110,9 @@ let g:airline_right_sep= '░'
 
 ### Plug ['scrooloose/syntastic'](https://github.com/scrooloose/syntastic)
 
-Syntastic is a syntax checking plugin for Vim, and it provides support for every language ever created. Even that hobby functional compiler you abandoned two years ago. It runs various programs that lint your code, and displays where the problems are. This is going to save you so much time.
+Syntastic is a syntax checking plugin, and it provides support for just about every language ever created. It runs your code through various linting programs, and shows any issues that come up. This allows you to catch errors long before you even try compile.
 
-I like to make sure the location list is automatically populated and toggled when there is an issue. The ugly, bright red error display it adds to airline isn't really needed, so I disable it.
+I like to make sure the location list is automatically populated and toggled when there is an problem. The ugly, bright red error display it adds to airline isn't really needed, so I disable it.
 
 ```vim
 let g:syntastic_always_populate_loc_list = 1
@@ -131,7 +131,7 @@ I know what you are thinking, "Vim is a code editor. Where are all the language 
 - No support for esoteric languages, only the most popular ones.
 - Each build is tested by an automated vimrunner script on CI.
 
-Perhaps it didn't choose the language pack you prefer, or you'd like to use the beta version of a specific plugin. Every language can be overriden, and that is exbctly what we will do in the next section.
+Perhaps it didn't choose the language pack you prefer, or you'd like to use the beta version of a specific plugin. Every language can be overriden, and that is exactly what we will do in the next section.
 
 ### Plug ['elmcast/elm-vim'](https://github.com/elmcast/elm-vim)
 
