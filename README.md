@@ -103,7 +103,7 @@ The [gruvox-contrib](https://github.com/morhetz/gruvbox-contrib) repo also has s
 
 ### Plug ['vim-airline/vim-airline'](https://github.com/vim-airline/vim-airline)
 
-Airline is a "lean & mean status/tabline for Vim that's light as air." Its fast, looks great out of the box, and is infinitely customizable. And guess what? Gruvbox provides a great theme; no setup needed. I like to change the character that is used betwen sections in the status bar.
+Airline is a "lean & mean status/tabline for Vim that's light as air." It is fast, looks great out of the box, and is infinitely customizable. And guess what? Gruvbox provides a great theme; no setup needed. I like to change the character that is used betwen sections in the status bar.
 
 ```vim
 let g:airline_left_sep= '░'
@@ -163,4 +163,4 @@ let g:markdown_fenced_languages = ['html', 'json', 'css', 'javascript', 'elm', '
 
 I know it seems like a lot of work, but it goes to show how easy is is to take for granted the expert domain knowledge we accumulate over the years. If someone is coming from another editor, or isn't familiar the command line, each of those tiny configuration steps must be gleaned from pouring over disparate blog posts and help files spread all over the place.
 
-I encourage you to think about what its like for a beginner to get started with your projects, and to create detailed guides just for them. Remember, every detail is precious. Happy coding!
+I encourage you to think about what it's like for a beginner to get started with your own projects, and to create detailed guides just for them. Remember, every detail is precious. Happy coding!
