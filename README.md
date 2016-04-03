@@ -30,7 +30,7 @@ $ brew install neovim
 
 ## Make Backups
 
-Backup your .vimrc or init.vim file. **I cannot stress this enough.** You might make a mistake or realize that this setup just isn't your bowl of peaches. Some day you will want to go back to your favorite config from 2004 and just incorporate some of the cool stuff you've learn from this experience.
+Backup your .vimrc or init.vim file. **I cannot stress this enough.** You might make a mistake or realize that this setup just isn't your bowl of peaches. Some day you will want to go back to your favorite config from 2004 and just incorporate some of the cool stuff you've learn from this experience.  **BACK IT UP**
 
 ```
 $ cp -R .vimrc .vimrc.bak
