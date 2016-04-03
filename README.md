@@ -122,7 +122,7 @@ let g:syntastic_auto_loc_list = 1
 let g:airline#extensions#syntastic#enabled = 0
 ```
 
-### Plug ['sheerun/vim-polyglot'](sheerun/vim-polyglot)
+### Plug ['sheerun/vim-polyglot'](https://github.com/sheerun/vim-polyglot)
 
 I know what you are thinking, "Vim is a code editor. Where are all the language plugins??" Vim Polyglot is a curated collection of language packs. This might be the most contentious choice so far, so I'll have the project speak for itself.
 
