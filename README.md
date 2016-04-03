@@ -54,13 +54,13 @@ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 > call plug#begin()
 
-It doesn't take much to get that IDE feeling from a fresh Vim install. You will probably want to add more cool plugins, and configure languages just how you like it. Make it your own!
+It doesn't actually take much to make Vim a productive editing environment. I will detail the few plugins that I make use of below. There are [many more](http://vimawesome.com/) available, and I encourage you explore every so often to see if you can make your editing experience more efficient and enjoyable.
 
 ### Plug ['tpope/vim-sensible'](https://github.com/tpope/vim-sensible)
 
-Most of the basic settings you copy and pasted into your .vimrc file years ago are perfectly tweaked in `vim-sensible` already. After installing it, do what I did and delete each general option in your config and see if it has become redundant. The ones left for me include changing `mapleader` to the space key, enabling line numbers, and configuring the drop down menu.
+Most of the basic settings that you copy-and-pasted from the internet years ago are probably enabled and perfectly tweaked in `vim-sensible` already. After installing it, do what I did and delete each general option in your config one by one to see if it has become redundant. The ones left over for me include changing `mapleader` to the space key, enabling line numbers, and configuring the drop down menu.
 
-And don't forget, it also sets up `<CTRL-l>` to easily clear search highlights without leaving the home row.
+And don't forget, `vim-sensible` also configures `<CTRL-l>` to clear search highlights without leaving the home row.
 
 ```vim
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
@@ -76,7 +76,7 @@ set completeopt=longest,menuone
 
 ### Plug ['scrooloose/nerdtree'](https://github.com/scrooloose/nerdtree)
 
-NERDTree is a side bar plugin that shows an interactive project view. You probably also want to use something like [ctrl-p](https://github.com/kien/ctrlp.vim) for fuzzy finding files, but my brain gets a lot of value from a visual interface.
+NERDTree is a side bar plugin that shows an interactive project view. You might also want to use something like [ctrl-p](https://github.com/kien/ctrlp.vim) for fuzzy file finding, but my brain gets a lot of value from a visual interface.
 
 I like the tree to start open unless I have provided a file on the command line. In that case, I am most likely using Vim as a pager (git commit, for example.)
 
@@ -92,18 +92,18 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 ### Plug ['morhetz/gruvbox'](https://github.com/morhetz/gruvbox)
 
-The gruvbox suite of color schemes is developed with an extreme level of care. It provides support for all the third party vim plugins you might use, and ships with hand crafted syntax overrides for many languages.
+The Gruvbox suite of color schemes is developed with an extreme level of care. It provides support for all the third party Vim plugins you might use, and ships with hand crafted syntax overrides for many languages.
 
 ```vim
 set background=dark
 colorscheme gruvbox
 ```
 
-The [gruvox-contrib](https://github.com/morhetz/gruvbox-contrib) repo also has support for most terminals. So go download the [itermcolors](https://raw.githubusercontent.com/morhetz/gruvbox-contrib/master/iterm2/gruvbox-dark.itermcolors) scheme and install it if you want the same look and feel outside of vim.
+The [gruvox-contrib](https://github.com/morhetz/gruvbox-contrib) repo also has support for most terminals. So go download the [itermcolors](https://raw.githubusercontent.com/morhetz/gruvbox-contrib/master/iterm2/gruvbox-dark.itermcolors) scheme and install it if you want the same look and feel outside of Vim.
 
 ### Plug ['vim-airline/vim-airline'](https://github.com/vim-airline/vim-airline)
 
-Airline is a "lean & mean status/tabline for vim that's light as air." Its fast, looks great out of the box, and is infinitely customizable. And guess what? Gruvbox provides a great theme; no setup needed. I like to change the character that is used betwen sections in the status bar.
+Airline is a "lean & mean status/tabline for Vim that's light as air." Its fast, looks great out of the box, and is infinitely customizable. And guess what? Gruvbox provides a great theme; no setup needed. I like to change the character that is used betwen sections in the status bar.
 
 ```vim
 let g:airline_left_sep= '░'
