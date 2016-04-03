@@ -1,10 +1,12 @@
 # ElmCast.vim
 
-I have been asked a lot lately about the Vim setup I use for [ElmCast.io](http://www.elmcast.io/). My config file is less than 50 lines long, and I keep the number of plugins to a minimum. Everything should work out of the box on pretty much any platform, and I will describe the exact steps to reproduce my day to day environment.
+I have been asked a lot lately about the Vim setup I use for [ElmCast.io](http://www.elmcast.io/). My config file about 50 lines long, and I keep the number of plugins to a minimum. Everything should work out of the box on pretty much any platform, but I will describe the exact steps to reproduce my day to day environment.
 
 ## Choose a Terminal
 
-You probably already have a favorite terminal, and I won't try to convince you to change. To get the best experience, however, you need one with 24bit color support. I use the 2.9 beta of [iTerm2](http://iterm2.com/downloads.html) which works great. The caveat is that if you use [tmux](https://tmux.github.io/), it only recently got support, and can be a bit fiddly to enable. You'll need to set the `TERM` of the outer shell to a value that supports 24bit color, and then add a terminal override in tmux for that term.
+You probably already have a favorite terminal, and I won't try to convince you to change. To get the best experience, however, you need one with 24bit color support.
+
+Since I am on osx, I use the 2.9 beta of [iTerm2](http://iterm2.com/downloads.html), which works great. The caveat is that if you use [tmux](https://tmux.github.io/), it only recently got patched for it, and can be a bit fiddly to enable. You'll need to set the `TERM` of the outer shell to a value that supports 24bit color, and then add a terminal override in tmux.
 
 ```
 $ brew install tmux --HEAD
