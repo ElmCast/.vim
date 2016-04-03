@@ -118,14 +118,14 @@ I know what you are thinking, "Vim is a code editor. Where are all the language 
 - It **installs and updates 70+ times faster** than 70+ packages it consist of.
 - Solid syntax and indentation support. Only the best language packs.
 - All unnecessary files are ignored (like enormous documentation from php support).
-- No support for esoteric languages, only most popular ones.
+- No support for esoteric languages, only the most popular ones.
 - Each build is tested by an automated vimrunner script on CI.
 
 Perhaps it didn't choose the language pack you prefer, or you'd like to use the `HEAD` version of a specific plugin. Every language can be overriden, and that is exactly what we will do in the next section.
 
 ### [Plug 'elmcast/elm-vim']()
 
-Ware finally ready to configure Elm. First, I disable the elm package in polyglot, which uses the venerable [elm.vim](https://github.com/lambdatoast/elm.vim) plugin. I suggest you go check it out, because you might find you like it more than `elm-vim`.
+We are finally ready to configure Elm. First, I disable the elm package in polyglot, which uses the venerable [elm.vim](https://github.com/lambdatoast/elm.vim) plugin. I suggest you go check it out, because you might find you like it more than `elm-vim`.
 
 I prefer turning detailed completion on, which shows the type declaration in the drop down menu. I also have [elm-format](https://github.com/avh4/elm-format) make my code look great every time I save a file. Finally, I have syntastic also show warnings in the location list.
 
