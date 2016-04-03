@@ -22,10 +22,12 @@ set-option -ga terminal-overrides ",screen-256color:Tc"
 
 ## Install Vim
 
-I prefer [neovim](https://github.com/neovim/neovim) which is just an all around better experience than vanilla Vim. Most plugins work great with it already, and can make use of the improved async support and performance.
+I prefer [neovim](https://github.com/neovim/neovim) which is just an all around better experience than vanilla Vim. Most plugins work great with it already, and can make use of the improved async support and performance. 
+
+No, that isn't a typo. The homebrew formula for neovim is provide by the authors separately, so that is why the package name isn't just 'neovim'.
 
 ```
-$ brew install neovim
+$ brew install neovim/neovim/neovim
 ```
 
 ## Make Backups
@@ -50,7 +52,7 @@ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 > call plug#begin()
 
-It doesn't take much to get that IDE feeling from a fresh Vim install. You will probably want to add more cool plugins, and configure languages just how you like it. Go for it!
+It doesn't take much to get that IDE feeling from a fresh Vim install. You will probably want to add more cool plugins, and configure languages just how you like it. Make it your own!
 
 ### Plug ['tpope/vim-sensible'](https://github.com/tpope/vim-sensible)
 
@@ -129,13 +131,13 @@ I know what you are thinking, "Vim is a code editor. Where are all the language 
 - No support for esoteric languages, only the most popular ones.
 - Each build is tested by an automated vimrunner script on CI.
 
-Perhaps it didn't choose the language pack you prefer, or you'd like to use the `HEAD` version of a specific plugin. Every language can be overriden, and that is exactly what we will do in the next section.
+Perhaps it didn't choose the language pack you prefer, or you'd like to use the beta version of a specific plugin. Every language can be overriden, and that is exbctly what we will do in the next section.
 
 ### Plug ['elmcast/elm-vim'](https://github.com/elmcast/elm-vim)
 
-We are finally ready to configure Elm. First, I disable the elm package in polyglot, which uses the venerable [elm.vim](https://github.com/lambdatoast/elm.vim) plugin. I suggest you go check it out, because you might find you like it more than `elm-vim`.
+We are finally ready to configure Elm. First, I disable the elm package in polyglot, which provides the venerable [elm.vim](https://github.com/lambdatoast/elm.vim) plugin. I suggest you go check it out, because you might find you like it more than `elm-vim`.
 
-I prefer turning detailed completion on, which shows the type declaration in the drop down menu. I also have [elm-format](https://github.com/avh4/elm-format) make my code look great every time I save a file. Finally, I have syntastic also show warnings in the location list.
+I prefer turning detailed completion on, which shows the type declaration in the drop down menu. I also have [elm-format](https://github.com/avh4/elm-format) make my code look great every time I save a file. Finally, I have syntastic also show warnings in addition to errors.
 
 ```vim
 let g:polyglot_disabled = ['elm']
@@ -144,9 +146,9 @@ let g:elm_format_autosave = 1
 let g:elm_syntastic_show_warnings = 1
 ```
 
-There are a few other file types that you often need to edit in an Elm project. Polyglot will take care of html, css, and json for you. In Markdown files I like to turn on spelling, enable line breaks, turn off line numbers.
+There are a few other file types that you often need to edit in an Elm project. Polyglot will take care of html, css, and json for you. In Markdown files I like to turn on spelling, enable line breaks, and remove line numbers.
 
-You can also add the languages that you want to be highlighted in Markdown code fences.
+You can also configure the languages that you want highlighted in Markdown code fences.
 
 ```vim
 autocmd BufNewFile,BufRead *.md set spell | set lbr | set nonu
@@ -157,6 +159,6 @@ let g:markdown_fenced_languages = ['html', 'json', 'css', 'javascript', 'elm', '
 
 ## Summary
 
-I know it seems like a lot of work, but it just goes to show how it is easy to take for granted the domain knowledge we have accumulated over the years as experts. If someone is coming from another editor, or isn't used to working on the command line, all those tiny configuration steps will be hard won over many years.
+I know it seems like a lot of work, but it goes to show how easy is is to take for granted the expert domain knowledge we accumulate over the years. If someone is coming from another editor, or isn't familiar the command line, each of those tiny configuration steps must be gleaned from pouring over disparate blog posts and help files spread all over the place.
 
-I encourage you to think about what it would be like for a beginner to get started with your projects, and create detailed guides just for them. Remember, every detail is precious. Happy coding!
+I encourage you to think about what its like for a beginner to get started with your projects, and to create detailed guides just for them. Remember, every detail is precious. Happy coding!
