@@ -11,16 +11,16 @@ call plug#end()
 
 " General
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-let mapleader=" "
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
+set fillchars+=vert:\ 
+let mapleader=" "
 set number
 set ignorecase
 set noswapfile
 set completeopt=longest,menuone
 
-" Scheme
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set fillchars+=vert:\ 
+" Gruvbox
 set background=dark
 colorscheme gruvbox
 

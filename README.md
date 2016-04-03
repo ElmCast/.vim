@@ -54,14 +54,16 @@ It doesn't take much to get that IDE feeling from a fresh Vim install. You will 
 
 ### [Plug 'tpope/vim-sensible'](https://github.com/tpope/vim-sensible)
 
-Most of the basic settings you copy and pasted into your .vimrc file years ago are perfectly tweaked in `vim-sensible` already. After installing it, do what I did and delete each general option in your config and see if it has become redundant. The ones left for me include changing `mapleader` to the space key, and enabling line numbers.
+Most of the basic settings you copy and pasted into your .vimrc file years ago are perfectly tweaked in `vim-sensible` already. After installing it, do what I did and delete each general option in your config and see if it has become redundant. The ones left for me include changing `mapleader` to the space key, enabling line numbers, and configuring the drop down menu.
 
 And don't forget, it also sets up `<CTRL-l>` to easily clear search highlights without leaving the home row.
 
 ```vim
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-let mapleader=" "
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
+set fillchars+=vert:\ 
+let mapleader=" "
 set number
 set ignorecase
 set noswapfile
@@ -86,16 +88,14 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 ### [Plug 'morhetz/gruvbox']()
 
-The gruvbox suite of color schemes is developed with an extreme level of care. It provides support for all the third party vim plugins you might use, and ships with hand crafted syntax overrides for many languages. Here we turn on support for neovim's 24bit color and clear the vertical split separator.
+The gruvbox suite of color schemes is developed with an extreme level of care. It provides support for all the third party vim plugins you might use, and ships with hand crafted syntax overrides for many languages.
 
 ```vim
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set fillchars+=vert:\ 
 set background=dark
 colorscheme gruvbox
 ```
 
-The [gruvox-contrib](https://github.com/morhetz/gruvbox-contrib) repo also has support for most terminal. So go download the [itermcolors](https://raw.githubusercontent.com/morhetz/gruvbox-contrib/master/iterm2/gruvbox-dark.itermcolors) scheme and install it if you want the same look and feel outside of vim.
+The [gruvox-contrib](https://github.com/morhetz/gruvbox-contrib) repo also has support for most terminals. So go download the [itermcolors](https://raw.githubusercontent.com/morhetz/gruvbox-contrib/master/iterm2/gruvbox-dark.itermcolors) scheme and install it if you want the same look and feel outside of vim.
 
 ### [Plug 'vim-airline/vim-airline']()
 
