@@ -86,16 +86,24 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 ### [Plug 'morhetz/gruvbox']()
 
-The gruvbox suite of color schemes is developed with an extreme level of care. It provides support for all the third party vim plugins you might use, and ships with hand crafted syntax overrides for many languages. The [gruvox-contrib](https://github.com/morhetz/gruvbox-contrib) repo has support for most terminal emulators as well.
+The gruvbox suite of color schemes is developed with an extreme level of care. It provides support for all the third party vim plugins you might use, and ships with hand crafted syntax overrides for many languages. Here we turn on support for neovim's 24bit color and clear the vertical split separator.
 
-So now go download the [itermcolors](https://raw.githubusercontent.com/morhetz/gruvbox-contrib/master/iterm2/gruvbox-dark.itermcolors) scheme and install it if you want the same look and feel outside of vim.
+```vim
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set fillchars+=vert:\ 
+set background=dark
+colorscheme gruvbox
+```
+
+The [gruvox-contrib](https://github.com/morhetz/gruvbox-contrib) repo also has support for most terminal. So go download the [itermcolors](https://raw.githubusercontent.com/morhetz/gruvbox-contrib/master/iterm2/gruvbox-dark.itermcolors) scheme and install it if you want the same look and feel outside of vim.
 
 ### [Plug 'vim-airline/vim-airline']()
 
-Airline is a "lean & mean status/tabline for vim that's light as air." Its fast, looks great out of the box, and is infinitely customizable. And guess what? Gruvbox provides a great theme; no setup needed. The sign of a quality plugin is one that needs no configuration.
+Airline is a "lean & mean status/tabline for vim that's light as air." Its fast, looks great out of the box, and is infinitely customizable. And guess what? Gruvbox provides a great theme; no setup needed. I like to change the character that is used betwen sections in the status bar.
 
 ```vim
-" No really. It just works.
+let g:airline_left_sep= '░'
+let g:airline_right_sep= '░'
 ```
 
 ### [Plug 'scrooloose/syntastic']()
@@ -136,12 +144,12 @@ let g:elm_format_autosave = 1
 let g:elm_syntastic_show_warnings = 1
 ```
 
-There are a few other file types that you often need to edit in an Elm project. Polyglot will take care of html, css, and json for you. In Markdown files I like to turn on spelling, enable line breaks, turn off line numbers, and add key mappings to easily navigate between long wrapped lines.
+There are a few other file types that you often need to edit in an Elm project. Polyglot will take care of html, css, and json for you. In Markdown files I like to turn on spelling, enable line breaks, turn off line numbers.
 
 You can also add the languages that you want to be highlighted in Markdown code fences.
 
 ```vim
-autocmd BufNewFile,BufRead *.md set spell | set lbr | set nonu | nn j gj | nn k gk
+autocmd BufNewFile,BufRead *.md set spell | set lbr | set nonu
 let g:markdown_fenced_languages = ['html', 'json', 'css', 'javascript', 'elm', 'vim']
 ```
 

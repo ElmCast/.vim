@@ -23,6 +23,8 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set fillchars+=vert:\ 
 set background=dark
 colorscheme gruvbox
+
+" Airline
 let g:airline_left_sep= '░'
 let g:airline_right_sep= '░'
 
@@ -45,5 +47,5 @@ let g:elm_format_autosave = 1
 let g:elm_syntastic_show_warnings = 1
 
 " Markdown
-autocmd BufNewFile,BufRead *.md set spell | set lbr | set nonu | nn j gj | nn k gk
+autocmd BufNewFile,BufRead *.md set spell | set lbr | set nonu
 let g:markdown_fenced_languages = ['html', 'json', 'css', 'javascript', 'elm', 'vim']
