@@ -52,7 +52,7 @@ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 It doesn't take much to get that IDE feeling from a fresh Vim install. You will probably want to add more cool plugins, and configure languages just how you like it. Go for it!
 
-### [Plug 'tpope/vim-sensible'](https://github.com/tpope/vim-sensible)
+### Plug ['tpope/vim-sensible'](https://github.com/tpope/vim-sensible)
 
 Most of the basic settings you copy and pasted into your .vimrc file years ago are perfectly tweaked in `vim-sensible` already. After installing it, do what I did and delete each general option in your config and see if it has become redundant. The ones left for me include changing `mapleader` to the space key, enabling line numbers, and configuring the drop down menu.
 
@@ -70,7 +70,7 @@ set noswapfile
 set completeopt=longest,menuone
 ```
 
-### [Plug 'scrooloose/nerdtree']()
+### Plug ['scrooloose/nerdtree'](https://github.com/scrooloose/nerdtree)
 
 NERDTree is a side bar plugin that shows an interactive project view. You probably also want to use something like [ctrl-p](https://github.com/kien/ctrlp.vim) for fuzzy finding files, but my brain gets a lot of value from a visual interface.
 
@@ -86,7 +86,7 @@ autocmd VimEnter * if (0 == argc()) | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 ```
 
-### [Plug 'morhetz/gruvbox']()
+### Plug ['morhetz/gruvbox'](https://github.com/morhetz/gruvbox)
 
 The gruvbox suite of color schemes is developed with an extreme level of care. It provides support for all the third party vim plugins you might use, and ships with hand crafted syntax overrides for many languages.
 
@@ -97,7 +97,7 @@ colorscheme gruvbox
 
 The [gruvox-contrib](https://github.com/morhetz/gruvbox-contrib) repo also has support for most terminals. So go download the [itermcolors](https://raw.githubusercontent.com/morhetz/gruvbox-contrib/master/iterm2/gruvbox-dark.itermcolors) scheme and install it if you want the same look and feel outside of vim.
 
-### [Plug 'vim-airline/vim-airline']()
+### Plug ['vim-airline/vim-airline'](https://github.com/vim-airline/vim-airline)
 
 Airline is a "lean & mean status/tabline for vim that's light as air." Its fast, looks great out of the box, and is infinitely customizable. And guess what? Gruvbox provides a great theme; no setup needed. I like to change the character that is used betwen sections in the status bar.
 
@@ -106,7 +106,7 @@ let g:airline_left_sep= '░'
 let g:airline_right_sep= '░'
 ```
 
-### [Plug 'scrooloose/syntastic']()
+### Plug ['scrooloose/syntastic'](https://github.com/scrooloose/syntastic)
 
 Syntastic is a syntax checking plugin for Vim, and it provides support for every language ever created. Even that hobby functional compiler you abandoned two years ago. It runs various programs that lint your code, and displays where the problems are. This is going to save you so much time.
 
@@ -118,7 +118,7 @@ let g:syntastic_auto_loc_list = 1
 let g:airline#extensions#syntastic#enabled = 0
 ```
 
-### [Plug 'sheerun/vim-polyglot']()
+### Plug ['sheerun/vim-polyglot'](sheerun/vim-polyglot)
 
 I know what you are thinking, "Vim is a code editor. Where are all the language plugins??" Vim Polyglot is a curated collection of language packs. This might be the most contentious choice so far, so I'll have the project speak for itself.
 
@@ -131,7 +131,7 @@ I know what you are thinking, "Vim is a code editor. Where are all the language 
 
 Perhaps it didn't choose the language pack you prefer, or you'd like to use the `HEAD` version of a specific plugin. Every language can be overriden, and that is exactly what we will do in the next section.
 
-### [Plug 'elmcast/elm-vim']()
+### Plug ['elmcast/elm-vim'](https://github.com/elmcast/elm-vim)
 
 We are finally ready to configure Elm. First, I disable the elm package in polyglot, which uses the venerable [elm.vim](https://github.com/lambdatoast/elm.vim) plugin. I suggest you go check it out, because you might find you like it more than `elm-vim`.
 
