@@ -30,7 +30,7 @@ $ brew install neovim
 
 ## Make Backups
 
-**BACKUP your .vimrc or init.vim file.** I cannot stress this enough, because you might make a mistake or realize that this setup just isn't your bowl of peaches. Some day you will want to go back to your favorite config and just incorporate some of the cool stuff you've learn from this experience.
+Backup your .vimrc or init.vim file. **I cannot stress this enough.** You might make a mistake or realize that this setup just isn't your bowl of peaches. Some day you will want to go back to your favorite config from 2004 and just incorporate some of the cool stuff you've learn from this experience.
 
 ```
 $ cp -R .vimrc .vimrc.bak
@@ -39,20 +39,20 @@ $ cp -R .vim/init.vim .vim/init.vim.bak
 
 ## Plugin Management
 
-Any plugin manager should work, but you will need make to make the needed changes for yourself. I have been using [vim-plug](https://github.com/junegunn/vim-plug) for years because of its power, simplicity, and minimal interface.
+Any plugin manager should work, but you will need to make the changes yourself. I have been using [vim-plug](https://github.com/junegunn/vim-plug) for years because of its power, simplicity, and minimal interface.
 
 ```
 $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-## Relax.
+## Relax
 
 > call plug#begin()
 
 It doesn't take much to get that IDE feeling from a fresh Vim install. You will probably want to add more cool plugins, and configure languages just how you like it. Go for it!
 
-## [Plug 'tpope/vim-sensible'](https://github.com/tpope/vim-sensible)
+### [Plug 'tpope/vim-sensible'](https://github.com/tpope/vim-sensible)
 
 Most of the basic settings you copy and pasted into your .vimrc file years ago are perfectly tweaked in `vim-sensible` already. After installing it, do what I did and delete each general option in your config and see if it has become redundant. The ones left form me include changing the `mapleader` to the space key, and enabling line numbers.
 
@@ -68,7 +68,7 @@ set noswapfile
 set completeopt=longest,menuone
 ```
 
-## [Plug 'scrooloose/nerdtree']()
+### [Plug 'scrooloose/nerdtree']()
 
 NERDTree is a side bar plugin that shows an interactive project view. You probably also want to use something like [ctrl-p](https://github.com/kien/ctrlp.vim) for fuzzy finding files, but my brain gets a lot of value from a visual interface. I like the tree to start open unless I have opened a specific file from the command line. In that case, I am most likely using Vim as a pager (git commit, for example.)
 
@@ -147,4 +147,6 @@ let g:markdown_fenced_languages = ['html', 'json', 'css', 'javascript', 'elm', '
 
 ## Summary
 
-I know it seems like a lot of work, but it just goes to show how it is easy to take for granted the domain knowledge we have accumulated over the years as experts. If someone is coming from another editor, or aren't used to working from the command line, all those tiny configuration steps are going to be hard won over many years. I encourage you to think about what it would be like for a beginner to get started with your projects, and create detailed guides just for them. Remember, every detail is precious. Happy coding!
+I know it seems like a lot of work, but it just goes to show how it is easy to take for granted the domain knowledge we have accumulated over the years as experts. If someone is coming from another editor, or aren't used to working from the command line, all those tiny configuration steps are going to be hard won over many years.
+
+I encourage you to think about what it would be like for a beginner to get started with your projects, and create detailed guides just for them. Remember, every detail is precious. Happy coding!
