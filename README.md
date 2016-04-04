@@ -116,11 +116,13 @@ let g:airline_right_sep= '░'
 
 Syntastic is a syntax checking plugin, and it provides support for just about every language ever created. It runs your code through various linting programs, and shows any issues that come up. This allows you to catch errors long before you even try to compile.
 
-I like to make sure the location list is automatically populated and toggled when there is a problem. The ugly, bright red error display it adds to airline isn't really needed, so I disable it.
+I like to make sure the location list is automatically populated and toggled when there is a problem. It's also convenient to always check when you open a file, but ignore errors when exiting. And finally, the bright red error display it adds to airline isn't really needed, so I disable it.
 
 ```vim
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:airline#extensions#syntastic#enabled = 0
 ```
 
