@@ -7,10 +7,10 @@ Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'elmcast/elm-vim'
 Plug 'scrooloose/nerdtree'
+Plug 'jszakmeister/vim-togglecursor'
 call plug#end()
 
 " General
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
 set fillchars+=vert:\ 
@@ -38,7 +38,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:airline#extensions#syntastic#enabled = 0
 
